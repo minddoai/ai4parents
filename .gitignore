@@ -1,0 +1,9 @@
+# 内部文档，不公开
+plan.html
+# 旧文件，已被 index.html 取代
+parents.html
+# 原始大图，页面用的是 mantou-logo.jpg
+assets/mantou-logo-original.jpg
+# 本地预览配置
+.claude/
+.DS_Store
