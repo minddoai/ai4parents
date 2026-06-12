@@ -31,7 +31,8 @@
   .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
 
   /* ===== Nav ===== */
-  nav { padding: 26px 0; position: sticky; top: 0; background: rgba(255,255,255,.95); backdrop-filter: blur(8px); z-index: 50; }
+  nav { padding: 26px 0; position: sticky; top: 0; background: rgba(255,255,255,.95); backdrop-filter: blur(8px); z-index: 50; border-bottom: 1px solid transparent; transition: border-color .2s ease, box-shadow .2s ease; }
+  nav.scrolled { border-bottom-color: var(--line); box-shadow: 0 2px 12px rgba(0,0,0,.05); }
   .nav-inner { display: flex; align-items: center; justify-content: space-between; }
   .logo { display: flex; align-items: center; gap: 9px; font-size: 22px; }
   .logo .logo-txt { font-weight: 900; color: #4A4A4A; display: inline-block; transform: skewX(-6deg); letter-spacing: 1px; }
@@ -203,33 +204,33 @@
 
     .hero { padding: 30px 0 12px; }
     .hero h1 { font-size: 29px; letter-spacing: -0.5px; }
-    .hero .sub { font-size: 15px; margin-top: 16px; }
+    .hero .sub { font-size: 16.5px; margin-top: 16px; }
     .hero .cta { margin-top: 24px; gap: 10px; }
     .hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 12px; margin-top: 32px; }
     .hero-stat b { font-size: 23px; }
-    .hero-stat small { font-size: 12px; }
+    .hero-stat small { font-size: 13px; }
 
     section { padding: 38px 0; }
     h2.sec { font-size: 26px; margin-bottom: 16px; }
-    .sec-sub { font-size: 14px; margin: -6px 0 22px; }
+    .sec-sub { font-size: 15.5px; margin: -6px 0 22px; }
 
     .feature { padding: 22px; gap: 20px; border-radius: 20px; }
     .feature .art { padding: 14px; }
     .feature .art svg { max-height: 130px; }
     .feature h3 { font-size: 19px; }
-    .feature p, .feature li { font-size: 14px; }
+    .feature p, .feature li { font-size: 15px; }
 
     .series { gap: 26px; }
     .series-item .img { margin-bottom: 10px; }
     .series-item .img svg { max-height: 100px; }
-    .series-item p { font-size: 13.5px; }
+    .series-item p { font-size: 15px; }
 
     .session { padding: 18px 0; }
     .session .num { display: flex; align-items: baseline; gap: 8px; font-size: 14px; }
     .session .num .big { font-size: 25px; display: inline; }
-    .session h3 { font-size: 16px; }
-    .session p { font-size: 13.5px; }
-    .session .tag { font-size: 11.5px; line-height: 1.6; padding: 3px 12px; }
+    .session h3 { font-size: 17.5px; }
+    .session p { font-size: 15px; }
+    .session .tag { font-size: 12.5px; line-height: 1.6; padding: 3px 12px; }
 
     .two-col { gap: 18px; }
     .persona { padding: 22px; border-radius: 18px; }
@@ -239,15 +240,15 @@
     .price-main, .price-vip { padding: 26px 22px; border-radius: 20px; }
     .price-main .amount { font-size: 42px; }
     .price-main .amount .was { font-size: 16px; margin-left: 8px; }
-    .price-main li, .price-vip li { font-size: 13.5px; }
+    .price-main li, .price-vip li { font-size: 15px; }
     .price-vip .amount { font-size: 28px; }
 
     .inst { gap: 20px; }
     .inst .avatar { width: 130px; height: 130px; font-size: 54px; }
     .inst h3 { font-size: 19px; }
 
-    summary { font-size: 15px; }
-    details p { font-size: 13.5px; }
+    summary { font-size: 16.5px; }
+    details p { font-size: 15px; }
 
     /* 16px 防止 iOS 聚焦输入框时自动放大页面 */
     .field { font-size: 16px; padding: 12px 20px; }
@@ -258,6 +259,9 @@
     .foot-grid { gap: 20px; }
     .foot-col { min-width: 40%; }
 
+    .persona li { font-size: 15px; }
+    .inst p { font-size: 15px; }
+    .inst .role-list li { font-size: 14px; }
     .mobile-cta { display: flex; }
   }
 
@@ -296,7 +300,7 @@
       <a class="nav-text" href="#who">适合谁</a>
       <a class="nav-text" href="#pricing">价格</a>
       <a class="nav-text" href="#faq">FAQ</a>
-      <a href="#contact" class="btn sm solid">报名咨询</a>
+      <a href="#contact" class="btn sm solid">报名第 01 期</a>
     </div>
   </div>
 </nav>
@@ -305,13 +309,13 @@
 <header class="hero">
   <div class="wrap">
     <h1>家长AI应用课 2.0<br>不写代码，用 AI<br>做出<span class="hl">真正属于你的产品</span></h1>
-    <p class="sub">孙教授亲自带队的 6 节小班实战课。每位家长用 Claude Code，围绕自己家庭和事业的真实需求，做出一个上线可用的网站、应用或数据分析工具。</p>
+    <p class="sub">孙教授亲自带队的 6 节训练营。每位家长用 Claude Code，围绕自己家庭和事业的真实需求，做出一个上线可用的网站、应用或数据分析工具。</p>
     <div class="cta">
-      <a class="btn solid" href="#contact">报名咨询</a>
+      <a class="btn solid" href="#contact">报名第 01 期</a>
       <a class="btn" href="#sessions">看看课程怎么上</a>
     </div>
     <div class="hero-stats">
-      <div class="hero-stat"><b>6 节课</b><small>每周 1 次 · 线下小班</small></div>
+      <div class="hero-stat"><b>6 节课</b><small>每周 1 次 · 线下训练营</small></div>
       <div class="hero-stat"><b>8–10 人</b><small>每期名额</small></div>
       <div class="hero-stat"><b>1 个作品</b><small>每人毕业必须上线</small></div>
       <div class="hero-stat"><b>$549</b><small>首发价 · 原价 <s>$649</s></small></div>
@@ -404,7 +408,7 @@
     <div class="session">
       <div class="num"><span class="big">04</span>实战</div>
       <div>
-        <h3>实战课 I：推进核心功能，围着你的问题转</h3>
+        <h3>实战 I：推进核心功能，围着你的问题转</h3>
         <p>从这节起不再讲新课。开场只讲全班共性问题，其余时间老师和助教轮流一对一帮你解决项目里的具体卡点，确保每人都被深度辅导。</p>
         <span class="tag">🎯 里程碑：核心功能跑通，数据能保存</span>
       </div>
@@ -412,7 +416,7 @@
     <div class="session">
       <div class="num"><span class="big">05</span>实战</div>
       <div>
-        <h3>实战课 II：进阶与打磨</h3>
+        <h3>实战 II：进阶与打磨</h3>
         <p>继续一对一解决问题。学有余力可以按需加进阶能力：接入 AI 功能、数据图表、装进手机。和同学交换试用彼此的作品，列出最后一节课前的待办清单。</p>
         <span class="tag">🎯 里程碑：作品达到「拿得出手」的完整度</span>
       </div>
@@ -496,7 +500,7 @@
         <div class="amount">$549<span class="was">原价 $649</span></div>
         <div class="note">每期仅 8–10 个名额 · 后续期次恢复原价</div>
         <ul>
-          <li>6 节线下小班课（孙教授亲授，每期 8–10 人）</li>
+          <li>6 节线下训练营（孙教授亲授，每期 8–10 人）</li>
           <li>全部视频课程 + 项目模板库</li>
           <li>微信群助教答疑 + 课后 30 天延续答疑</li>
           <li>作品上线发布指导</li>
@@ -554,7 +558,7 @@
 <section id="contact">
   <div class="wrap">
     <h2 class="sec">联系我们</h2>
-    <p class="sec-sub">留下信息预约报名咨询，或直接到访校区。我们也定期举办 90 分钟免费体验课：现场看 AI 一句话做出一个网站。</p>
+    <p class="sec-sub">留下信息预约报名第 01 期，或直接到访校区。我们也定期举办 90 分钟免费体验课：现场看 AI 一句话做出一个网站。</p>
     <div class="contact-grid">
       <form onsubmit="event.preventDefault();alert('感谢咨询！我们会尽快与您联系。');">
         <input class="field" type="text" placeholder="姓名" required>
@@ -616,8 +620,11 @@
 <!-- 手机端底部固定报名条 -->
 <div class="mobile-cta">
   <div class="price">$549<s>$649</s><small>首发价 · 每期仅 8–10 人</small></div>
-  <a class="btn solid" href="#contact">报名咨询</a>
+  <a class="btn solid" href="#contact">报名第 01 期</a>
 </div>
 
+<script>
+(function(){var n=document.querySelector("nav");function u(){if(n)n.classList.toggle("scrolled",window.scrollY>6);}u();window.addEventListener("scroll",u,{passive:true});})();
+</script>
 </body>
 </html>
